@@ -39,8 +39,25 @@ https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code
 (a) HeartSteps is an mHealth intervention that encourages regular walking via activity suggestions tailored to the individuals’ current context.  
 (b) 6-week MRT with 37 participants, notifications sent 2-5 times/day
 
+## The tables
+There are four tables...
+There is different events that are recorded within the data:
+![plot](HeartStepsTimePoints.png)
+
+### [Users](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv)
+[`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv) is a 44x xx data frame that contains demographic information on the participants as well as the results of the intake and exit surveys. The surveys collected data on the following topics:
+* ...
+* IPAQ
+Participants were interviewed before the study and after completing it. The first interview date is “intake date” and the second one is “exit date”. The exit survey re-administers the activity choice index, self-efficacy for physical activity and the IPAQ.
+
+### [Daily EMA](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv)
+Every night, participants responded to an ecological momentary assessment (EMA) about their day. Their responses to the questions are recoreded in [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x xx data frame. The EMA collected data on the following topics:
+* xx
+* xx
+
+### [Suggestions](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv)
+
+### [Steps](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv)
 
 
-## Column descriptions
-
-Column name	Type	Description		
+## Data Issues
