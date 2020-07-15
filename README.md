@@ -2,7 +2,7 @@
 
 ## Sources
 **Creators**: Shawna Smith, Susan Murphy, Pedrag Klasnja, Nick Seewald  
-**Editor**: Lisa Gotzian
+**Latest version by**: Lisa Gotzian
 
 from a mobile health intervention with the HeartSteps app
 
@@ -71,3 +71,30 @@ Every night, participants responded to an ecological momentary assessment (EMA) 
 
 
 ## Data Issues
+
+### Usage
+## Preliminaries for working with time in R
+
+```
+## largest number of digits used to represent fractional seconds
+options(digits.secs = 6)
+
+## number of digits in Unix time (seconds since 1970-01-01 00:00 UTC)
+## + largest number of digits used to represent fractional seconds
+options(digits = 10 + 6)
+
+sys.var <- switch(Sys.info()["sysname"],
+                  "Windows" = list(locale = "English",
+                                   mbox = "Z:/HeartSteps/"),
+                  "Darwin" = list(locale = "en_US",
+                                  mbox = "/Volumes/dav/HeartSteps/"),
+                  "Linux" = list(locale = "en_US.UTF-8",
+                                 mbox = "~/mbox/HeartSteps/"))
+## time zone identifiers are localized, so set the locale
+Sys.setlocale("LC_ALL", sys.var$locale)
+
+## arithmetic on POSIXct objects uses system time zone, so set this to UTC
+Sys.setenv(TZ = "GMT")
+```
+
+## Examplary analysis of the data
