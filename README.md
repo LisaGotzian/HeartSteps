@@ -37,7 +37,17 @@ https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code
 
 ## About the dataset
 (a) HeartSteps is an mHealth intervention that encourages regular walking via activity suggestions tailored to the individuals’ current context.  
-(b) 6-week MRT with 37 participants, notifications sent 2-5 times/day
+(b) 6-week MRT with 37 participants, notifications sent 2-5 times/day  
+(c) includes the following dataframes:
+* [`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv), a 44x140 dataframe for each user,  
+  **identifier**: user
+* [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x180 dataframe for each user for each day,  
+  **identifier**: user and study.date
+* [`suggestions.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv), a 8274x54 dataframe for each user for each notification,  
+  **identifier**: user, study.date and decision
+* [`steps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv), a 196,755x40 dataframe for each user for each minute,  
+  **identifier**: user, study.date, decision and step.time
+
 
 ## The tables
 There are four tables...
