@@ -37,13 +37,13 @@ https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code
 (b) 6-week MRT with 37 participants, notifications sent 2-5 times/day  
 (c) includes the following dataframes:
 * [`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv), a 37x119 dataframe for each user,  
-  **identifier**: *user*
+  **identifier**: *user.index*
 * [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x180 dataframe for each user for each day,  
-  **identifier**: *user* and *study.date*
+  **identifier**: *user.index* and *study.date*
 * [`suggestions.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv), a 8274x54 dataframe for each user for each notification,  
-  **identifier**: *user*, *study.date* and *decision*
+  **identifier**: *user.index*, *study.date* and *decision*
 * [`steps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv), a 196,755x40 dataframe for each user for each minute,  
-  **identifier**: *user*, *study.date*, *decision* and *step.time*
+  **identifier**: *user.index*, *study.date*, *decision* and *step.time*
 
 
 ## The tables
@@ -61,6 +61,7 @@ There is different events that are recorded within the data:
 * Self-Efficacy for Physical Activity (intake and exit)
 * International Prevalence Study (IPS) on Physical Activity
 * International Physical Activity Questionnaire (IPAQ)(intake and exit)
+* **Identifier**: *user.index*
 
 
 ### [Daily EMA](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv)
