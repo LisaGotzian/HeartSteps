@@ -36,7 +36,7 @@ https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code
 (a) HeartSteps is an mHealth intervention that encourages regular walking via activity suggestions tailored to the individuals’ current context.  
 (b) 6-week MRT with 37 participants, notifications sent 2-5 times/day  
 (c) includes the following dataframes:
-* [`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv), a 44x140 dataframe for each user,  
+* [`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv), a 37x119 dataframe for each user,  
   **identifier**: *user*
 * [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x180 dataframe for each user for each day,  
   **identifier**: *user* and *study.date*
@@ -52,10 +52,16 @@ There is different events that are recorded within the data:
 ![plot](HeartStepsTimePoints.png)
 
 ### [Users](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv)
-[`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv) is a 44x xx data frame that contains demographic information on the participants as well as the results of the intake and exit surveys. The surveys collected data on the following topics:
-* ...
-* IPAQ
-Participants were interviewed before the study and after completing it. The first interview date is “intake date” and the second one is “exit date”. The exit survey re-administers the activity choice index, self-efficacy for physical activity and the IPAQ.
+[`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv) is a 37x119 data frame that contains demographic information on the participants as well as the results of the intake and exit surveys. Participants were interviewed before the study and after completing it. The exit survey re-administers the activity choice index, self-efficacy for physical activity and the IPAQ. The surveys collected data on the following topics:
+* Demographic data
+* Mobile phone use
+* Walking environment at work
+* Conscientiousness
+* Activity Choice Index (intake and exit)
+* Self-Efficacy for Physical Activity (intake and exit)
+* International Prevalence Study (IPS) on Physical Activity
+* International Physical Activity Questionnaire (IPAQ)(intake and exit)
+
 
 ### [Daily EMA](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv)
 Every night, participants responded to an ecological momentary assessment (EMA) about their day. Their responses to the questions are recoreded in [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x xx data frame. The EMA collected data on the following topics:
