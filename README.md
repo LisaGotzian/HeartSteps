@@ -6,8 +6,7 @@
 
 from a mobile health intervention with the HeartSteps app
 
-based on "analysis.RData" retrieved from:
-https://app.box.com/folder/4346807882
+based on "analysis.RData" retrieved from Mbox (link not shared to the public)
 
 initial documentation of "analysis.RData":
 https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code/wiki/C-Analysis-data-frames
@@ -94,7 +93,7 @@ This table includes the following data:
 * **identifier**: *user.index*, *ema.index* and *decision.index*
 
 ### [Steps](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv)
-Using the jawbone tracker as well as the Google fit, a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in [`steps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv).
+Using the jawbone tracker as well as the Google fit, a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in [`steps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv).  
 **identifier**: *user.index*, *ema.index*, *decision.index* and *step.time*
 
 ## Data Issues
