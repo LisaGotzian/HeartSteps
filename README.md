@@ -38,16 +38,15 @@ https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code
 (c) includes the following dataframes:
 * [`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv), a 37x119 dataframe for each user,  
   **identifier**: *user.index*
-* [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x180 dataframe for each user for each day,  
-  **identifier**: *user.index* and *study.date*
+* [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x116 dataframe for each user for each day,  
+  **identifier**: *user.index* and *ema.index*
 * [`suggestions.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv), a 8274x54 dataframe for each user for each notification,  
-  **identifier**: *user.index*, *study.date* and *decision*
+  **identifier**: *user.index*, *ema.index* and *decision.index*
 * [`steps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv), a 196,755x40 dataframe for each user for each minute,  
-  **identifier**: *user.index*, *study.date*, *decision* and *step.time*
+  **identifier**: *user.index*, *ema.index*, *decision.index* and *step.time*
 
 
 ## The tables
-There are four tables...
 There is different events that are recorded within the data:
 ![plot](HeartStepsTimePoints.png)
 
@@ -61,18 +60,42 @@ There is different events that are recorded within the data:
 * Self-Efficacy for Physical Activity (intake and exit)
 * International Prevalence Study (IPS) on Physical Activity
 * International Physical Activity Questionnaire (IPAQ)(intake and exit)
-* **Identifier**: *user.index*
+* **identifier**: *user.index*
 
 
 ### [Daily EMA](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv)
-Every night, participants responded to an ecological momentary assessment (EMA) about their day. Their responses to the questions are recoreded in [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x xx data frame. The EMA collected data on the following topics:
-* xx
-* xx
+Every night, participants responded to an ecological momentary assessment (EMA) about their day. Their responses to the questions are recorded in [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x xx data frame. The EMA includes the following data:
+* notification time and response time
+* the **context** the user was in during the notification
+  * weather data
+  * location data
+  * front end application
+  * recognized activity (still, active etc.)
+* **daily EMA questions**
+  * specific plan to walking by the user
+  * how hectic, stressful and typical the day was
+  * type of physical activity the user engaged in that day
+* reasons for voting the suggestions in [`suggestions.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv) up or down
+* **enablers** and **barriers** for walking that day
+* **identifier**: *user.index* and *ema.index*
 
 ### [Suggestions](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv)
+At two to five points during the day, a notification is sent, randomly selected and if the person was available. The walking suggestions and the responses are recorded in [`suggestions.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv), a 8274x xx data frame.  
+<img src="notificationflowchart.png" alt="plot" width="400" >
+
+This table includes the following data:
+* notification time and response time as well as the type of walking suggestion: "active" if a person has been active or "sedentary" if a person has been sedentary 
+* the **context** the user was in during the notification & when voting the suggestion up or down
+  * weather data
+  * location data
+  * front end application
+  * recognized activity (still, active etc.)
+* aggregated step counts before and after the suggestions
+* **identifier**: *user.index*, *ema.index* and *decision.index*
 
 ### [Steps](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv)
-
+Using the jawbone tracker as well as the Google fit, a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in [`steps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv).
+**identifier**: *user.index*, *ema.index*, *decision.index* and *step.time*
 
 ## Data Issues
 
