@@ -5,9 +5,9 @@
 **Latest version by**: Lisa Gotzian
 
 The data was collected during a mobile health intervention with the HeartSteps app and combines tracker data with the Google Fitbit and Jawbone as well as local weather data.
-The current dataset is based on "analysis.RData" and "csv.RData" retrieved from the shared Mbox among the team (link not shared to the public).
+The current dataset is based on `analysis.RData` and `csv.RData` retrieved from the shared Mbox among the team (link not shared to the public).
 
-* initial documentation of "analysis.RData" and "csv.RData": https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code/wiki/C-Analysis-data-frames
+* initial documentation of `analysis.RData` and `csv.RData`: https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code/wiki/C-Analysis-data-frames
 
 * documentation of the data cleaning process: https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code
 
