@@ -35,14 +35,14 @@ https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code
 (a) HeartSteps is an mHealth intervention that encourages regular walking via activity suggestions tailored to the individuals’ current context.  
 (b) 6-week MRT with 37 participants, notifications sent 2-5 times/day  
 (c) includes the following dataframes:
-* [`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv), a 37x119 dataframe for each user,  
+* [`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv), a 37x120 dataframe for each user,  
   **identifier**: *user.index*
-* [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x116 dataframe for each user for each day,  
+* [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x87 dataframe for each user for each day,  
   **identifier**: *user.index* and *ema.index*
-* [`suggestions.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv), a 8274x54 dataframe for each user for each notification,  
+* [`suggestions.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv), a 8274x87 dataframe for each user for each notification,  
   **identifier**: *user.index*, *ema.index* and *decision.index*
-* [`steps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv), a 196,755x40 dataframe for each user for each minute,  
-  **identifier**: *user.index*, *ema.index*, *decision.index* and *step.time*
+* [`jbsteps.csv` and `gfsteps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv), a 197524x8 dataframe for steps from the google fitbit tracker and a 237865x11 dataframe for steps from the  jawbone tracker dataframe for each user for each minute,  
+  **identifier**: *user.index*, *ema.index*, *decision.index* and *steps.utime*
 
 
 ## The tables
@@ -50,7 +50,7 @@ There is different events that are recorded within the data:
 ![plot](HeartStepsTimePoints.png)
 
 ### [Users](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv)
-[`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv) is a 37x119 data frame that contains demographic information on the participants as well as the results of the intake and exit surveys. Participants were interviewed before the study and after completing it. The exit survey re-administers the activity choice index, self-efficacy for physical activity and the IPAQ. The surveys collected data on the following topics:
+[`users.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/1.-users.csv) is a 37x120 data frame that contains demographic information on the participants as well as the results of the intake and exit surveys. Participants were interviewed before the study and after completing it. The exit survey re-administers the activity choice index, self-efficacy for physical activity and the IPAQ. The surveys collected data on the following topics:
 * Demographic data
 * Mobile phone use
 * Walking environment at work
@@ -63,7 +63,7 @@ There is different events that are recorded within the data:
 
 
 ### [Daily EMA](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv)
-Every night, participants responded to an ecological momentary assessment (EMA) about their day. Their responses to the questions are recorded in [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x xx data frame. The EMA includes the following data:
+Every night, participants responded to an ecological momentary assessment (EMA) about their day. Their responses to the questions are recorded in [`dailyema.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/2.-dailyema.csv), a 1686x87 data frame. The EMA includes the following data:
 * notification time and response time
 * the **context** the user was in during the notification
   * weather data
@@ -79,7 +79,7 @@ Every night, participants responded to an ecological momentary assessment (EMA) 
 * **identifier**: *user.index* and *ema.index*
 
 ### [Suggestions](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv)
-At two to five points during the day, a notification is sent, randomly selected and if the person was available. The walking suggestions and the responses are recorded in [`suggestions.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv), a 8274x xx data frame.  
+At two to five points during the day, a notification is sent, randomly selected and if the person was available. The walking suggestions and the responses are recorded in [`suggestions.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv), a 8274x87 data frame.  
 <img src="notificationflowchart.png" alt="plot" width="400" >
 
 This table includes the following data:
@@ -93,8 +93,9 @@ This table includes the following data:
 * **identifier**: *user.index*, *ema.index* and *decision.index*
 
 ### [Steps](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv)
-Using the jawbone tracker as well as the Google fit, a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in [`steps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv).  
-**identifier**: *user.index*, *ema.index*, *decision.index* and *step.time*
+Using the jawbone tracker as well as the Google fit, a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in [`jbsteps.csv` and `gfsteps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv), a 197524x8 dataframe for steps from the google fitbit tracker and a 237865x11 dataframe for steps from the  jawbone tracker dataframe for each user for each minute.
+
+**identifier**: *user.index*, *ema.index*, *decision.index* and *steps.utime*
 
 ## Data Issues
 
@@ -124,3 +125,5 @@ Sys.setenv(TZ = "GMT")
 ```
 
 ## Examplary analysis of the data
+To guarantee that time columns are read in as time, we recommend to use `read_csv()` from the `dplyr` package.
+
