@@ -38,7 +38,7 @@ The current dataset is based on `analysis.RData` and `csv.RData` retrieved from 
   **identifier**: *user.index* and *ema.index*
 * [`suggestions.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/3.-suggestions.csv), a 8,274x87 dataframe for each user for each notification,  
   **identifier**: *user.index*, *ema.index* and *decision.index*
-* [`jbsteps.csv` and `gfsteps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv), a 197,524x8 dataframe for steps from the google fitbit tracker and a 237865x11 dataframe for steps from the  jawbone tracker dataframe for each user for each minute,  
+* [`jbsteps.csv` and `gfsteps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-jbsteps.csv-and-gfsteps.csv), a 197,524x8 dataframe for steps from the google fitbit tracker and a 237865x11 dataframe for steps from the  jawbone tracker dataframe for each user for each minute,  
   **identifier**: *user.index*, *ema.index*, *decision.index* and *steps.utime*
 
 
@@ -90,7 +90,7 @@ This table includes the following data:
 * **identifier**: *user.index*, *ema.index* and *decision.index*
 
 ### [Steps](https://github.com/LisaGotzian/HeartSteps/wiki/4.-jbsteps.csv-and-gfsteps.csv)
-Using the jawbone tracker as well as the Google fit, a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in `jbsteps.csv` and `gfsteps.csv`, a 197,524x8 dataframe for steps from the google fitbit tracker and a 237,865x11 dataframe for steps from the  jawbone tracker dataframe for each user for each minute.
+Using the jawbone tracker as well as the Google fit, a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in [`jbsteps.csv` and `gfsteps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-jbsteps.csv-and-gfsteps.csv), a 197,524x8 dataframe for steps from the google fitbit tracker and a 237,865x11 dataframe for steps from the  jawbone tracker dataframe for each user for each minute.
 
 **identifier**: *user.index*, *ema.index*, *decision.index* and *steps.utime*
 
