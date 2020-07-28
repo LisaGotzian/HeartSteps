@@ -89,8 +89,8 @@ This table includes the following data:
 * aggregated step counts before and after the suggestions
 * **identifier**: *user.index*, *ema.index* and *decision.index*
 
-### [Steps](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv)
-Using the jawbone tracker as well as the Google fit, a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in [`jbsteps.csv` and `gfsteps.csv`](https://github.com/LisaGotzian/HeartSteps/wiki/4.-steps.csv), a 197,524x8 dataframe for steps from the google fitbit tracker and a 237,865x11 dataframe for steps from the  jawbone tracker dataframe for each user for each minute.
+### [Steps](https://github.com/LisaGotzian/HeartSteps/wiki/4.-jbsteps.csv-and-gfsteps.csv)
+Using the jawbone tracker as well as the Google fit, a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in `jbsteps.csv` and `gfsteps.csv`, a 197,524x8 dataframe for steps from the google fitbit tracker and a 237,865x11 dataframe for steps from the  jawbone tracker dataframe for each user for each minute.
 
 **identifier**: *user.index*, *ema.index*, *decision.index* and *steps.utime*
 
