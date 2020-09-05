@@ -120,5 +120,5 @@ Sys.setenv(TZ = "GMT")
 ```
 
 ## Examplary analysis of the data
-To guarantee that time columns are read in as time, we recommend to use `read_csv()` from the `dplyr` package.
+To guarantee that time columns are read in as time, we recommend to use `read_csv()` from the `tidyverse` package.
 
