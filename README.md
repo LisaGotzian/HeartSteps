@@ -9,7 +9,7 @@ The current dataset is based on `analysis.RData` and `csv.RData` retrieved from 
 
 * initial documentation of `analysis.RData` and `csv.RData`: https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code/wiki/C-Analysis-data-frames
 
-* documentation of the data cleaning process: https://github.com/StatisticalReinforcementLearningLab/HeartstepsV1Code
+* the current dataset was created by running `build_heartsteps_data.R` on `analysis.RData` and `csv.RData`
 
 ## Past usage
 * **Reinforcement Learning & Contextual Bandits**  
